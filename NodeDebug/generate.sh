@@ -8,7 +8,7 @@ echo "# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" > $FOLDER/Dockerfile
 echo "# NOTE: DO *NOT* EDIT THIS FILE.  IT IS GENERATED." >> $FOLDER/Dockerfile
 echo "# PLEASE UPDATE Dockerfile.txt INSTEAD OF THIS FILE" >> $FOLDER/Dockerfile
 echo "# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" >> $FOLDER/Dockerfile
-echo FROM selenium/$BASE:$VERSION >> $FOLDER/Dockerfile
+echo FROM fc/$BASE:$VERSION >> $FOLDER/Dockerfile
 cat ./Dockerfile.txt >> $FOLDER/Dockerfile
 
 cat ../NodeBase/entry_point.sh \
