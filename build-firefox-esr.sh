@@ -11,7 +11,7 @@
 #
 #  fc/selenium-node-firefox:2.53.1-esr
 #  fc/selenium-standalone-firefox:2.53.1-esr
-#  fc/selenium-node-firefox-debug:2.53.1-esr
+#  fc/selenium-standalone-firefox-debug:2.53.1-esr
 #
 
 set -eu
@@ -30,9 +30,9 @@ cd ..
 cd ./StandaloneFirefox 
   docker build -t fc/selenium-standalone-firefox:${ESR_VERSION} .
 cd ..
-cd ./NodeDebug 
-  ./generate.sh NodeFirefoxDebug selenium-node-firefox Firefox ${ESR_VERSION}
+cd ./StandaloneDebug 
+  ./generate.sh StandaloneFirefoxDebug selenium-standalone-firefox Firefox ${ESR_VERSION}
 cd ..
-cd ./NodeFirefoxDebug
-  docker build -t fc/selenium-node-firefox-debug:${ESR_VERSION} .
+cd ./StandaloneFirefoxDebug
+  docker build -t fc/selenium-standalone-firefox-debug:${ESR_VERSION} .
 cd ..
